@@ -1,0 +1,554 @@
+/* GLOBAL **********************************/
+
+/* palette
+  grey #212121
+  red #8f0000
+  blue #004666
+  green #005532
+*/
+
+:root {
+  --darkpurple: #420065;
+  --dark: #212121;
+  --altdark: #313131;
+  --font: #d1d1d1;
+}
+
+body {
+    display: block;
+    margin: 0;
+    background-color: var(--darkpurple);
+    color: var(--font);
+}
+ 
+#title {
+     margin-top: 30px;
+     margin-bottom: 30px;
+}
+ 
+.pageHeader {
+     display: block;
+     font-family: 'Open Sans Condensed', sans-serif;
+     font-size: 8em;
+     text-align: center;
+     letter-spacing: .30em;
+     margin: 0;
+}
+ 
+.subHeader {
+     display: block;
+     font-family: 'Slabo 27px', sans-serif;
+     font-size: 2em;
+     text-align: center;
+     letter-spacing: .35em;
+     margin: 0;
+}
+ 
+.section {
+     width: 100%;
+     padding: 3em 0 3em 0;
+}
+ 
+.sectionHeader {
+     font-family: 'Slabo 27px', sans-serif;
+     font-size: 5em;
+     text-align: center;
+     letter-spacing: .20em;
+     margin: 0;
+}
+
+/* .sectionHeader:hover {
+  color: var(--darkpurple);
+  background-color: black;
+  cursor: pointer;
+} */
+
+h4 {
+  font-family: 'Slabo 27px', sans-serif;
+  color: #fff;
+  font-size: 2em;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 3vh;
+}
+
+h5 {
+  font-family: 'Slabo 27px', sans-serif;
+  color: #fff;
+  font-size: 1.6em;
+  margin: 0;
+  text-align: center;
+}
+
+P {
+  font-family: 'Nanum Gothic', serif;
+  color: #fff;
+  font-size: 1em;
+  margin: 0;
+}
+
+.centerText {
+  text-align: center;
+}
+ 
+
+ /* DESIGN *********************************/
+#design {
+  background-color: var(--dark);
+  overflow: auto;
+}
+
+#galleryContainer {
+  padding-top: 9vh;
+  padding-bottom: 17vh;
+}
+
+.gallery {
+  width: 80%;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.gallery div {
+  position: relative;
+  float: left;
+  padding: 1%;
+  width: 23%;
+}
+
+.gallery div img {
+  display: block;
+  max-width: 100%;
+  transition: .1s transform;
+  transform: translateZ(0); /* hack */
+}
+
+.gallery div:hover {
+  z-index: 1;
+}
+
+.gallery div:hover img {
+  transform: scale(2, 2); /*1.7, 1.7*/
+  transition: .3s transform;
+}
+
+.cf:before, .cf:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.cf:after {
+  clear: both;
+}
+
+#vidContainer {
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+}
+
+iframe {
+  flex: 1;
+  height: 40vh;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+}
+
+
+/* ABOUT **********************************/
+#about {
+  background-color: var(--dark);
+}
+
+#aboutContainer {
+  padding-top: 7vh;
+  display: flex;
+}
+
+#aboutText {
+  margin-left: 2em;
+  margin-right: 2em;
+  flex: 1;
+}
+
+.textContainer {
+  display: block;
+  max-width: 50%;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+#aboutPics {
+  flex: 1;
+}
+
+#aboutPics img {
+  display: block;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+/* FOOTER **********************************/
+ #footnote {
+   padding-top: 2em;
+   padding-bottom: 2em;
+ }
+
+ 
+ /* SCROLL BAR *****************************/
+ 
+::-webkit-scrollbar {
+   width: 9px;
+   height: 9px;
+}
+
+::-webkit-scrollbar-button {
+   width: 0px;
+   height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+   background: #d1d1d1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: var(--darkpurple);
+}
+
+ ::-webkit-scrollbar-thumb:active {
+   background: #9d03b8;
+}
+
+::-webkit-scrollbar-track {
+   background: #212121;
+}
+
+::-webkit-scrollbar-track:hover {
+   background: #212121;
+}
+
+::-webkit-scrollbar-track:active {
+   background: #212121;
+}
+
+::-webkit-scrollbar-corner {
+   background: transparent;
+}
+ 
+/* small desktop and tablets ***********************************************************************************************/
+/*-------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 1200px) {
+
+  /*Global ---------------------------------------------------------*/
+  #title {
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+  
+  .pageHeader {
+
+      font-size: 6em;
+
+      letter-spacing: .30em;
+      margin: 0;
+  }
+  
+  .subHeader {
+
+      font-size: 2em;
+
+      letter-spacing: .35em;
+      margin: 0;
+  }
+  
+  .section {
+      width: 100%;
+      padding: 2em 0 2em 0;
+  }
+
+  .sectionHeader {
+    font-family: 'Slabo 27px', sans-serif;
+    font-size: 5em;
+    text-align: center;
+    letter-spacing: .20em;
+    margin: 0;
+  }
+
+  #vidContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  
+  iframe {
+    flex: 1;
+    height: 35vh;
+  }
+
+  .textContainer {
+    max-width: 70%;
+  }
+
+
+}
+
+
+/* tablets  ***************************************************************************************************************/
+/*------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 950px) {
+
+  /*Global ---------------------------------------------------------*/
+  #title {
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+  
+  .pageHeader {
+
+      font-size: 5em;
+
+      letter-spacing: .30em;
+      margin: 0;
+  }
+  
+  .subHeader {
+
+      font-size: 1.5em;
+
+      letter-spacing: .35em;
+      margin: 0;
+  }
+  
+  .section {
+      width: 100%;
+      padding: 2em 0 2em 0;
+  }
+
+  .sectionHeader {
+
+    font-size: 4em;
+
+    letter-spacing: .20em;
+    margin: 0;
+  }
+
+  h4 {
+    font-family: 'Slabo 27px', sans-serif;
+    color: #fff;
+    font-size: 2em;
+    margin: 0;
+    text-align: center;
+    padding-bottom: 3vh;
+  }
+   
+  h5 {
+    font-family: 'Slabo 27px', sans-serif;
+    color: #fff;
+    font-size: 1.6em;
+    margin: 0;
+    text-align: center;
+  }
+   
+  p {
+    font-family: 'Nanum Gothic', serif;
+    color: #fff;
+    font-size: 1em;
+    margin: 0;
+  }
+   
+  .centerText {
+    text-align: center;
+  }
+
+
+
+
+  /*Design ----------------------------------------------------*/
+  #galleryContainer {
+    padding-top: 9vh;
+    padding-bottom: 17vh;
+  }
+  
+  .gallery {
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px;
+  }
+  
+  .gallery div {
+    position: relative;
+    float: left;
+    padding: 1%;
+    width: 46%;
+  }
+  
+  .gallery div:hover img {
+    transform: scale(1.5, 1.5); /*1.7, 1.7*/
+    transition: .3s transform;
+  }
+
+  #vidContainer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  
+  iframe {
+    flex: 1;
+    height: 45vh;
+  }
+
+
+}
+
+/* tablets and large phones ***********************************************************************************************/
+/*------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 725px) {
+
+  /*Global ---------------------------------------------------------*/
+  #title {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .pageHeader {
+      font-size: 4em;
+      letter-spacing: .20em;
+      margin: 0;
+  }
+
+  .subHeader {
+      font-size: 1.25em;
+      letter-spacing: .35em;
+      margin: 0;
+  }
+
+  .section {
+      width: 100%;
+      padding: 2em 0 2em 0;
+  }
+
+  .sectionHeader {
+    font-size: 3em;
+    letter-spacing: .20em;
+    margin: 0;
+  }
+  
+  p {
+    font-family: 'Nanum Gothic', serif;
+    color: #fff;
+    font-size: 1em;
+    margin: 0;
+  }
+  
+  .centerText {
+    text-align: center;
+  }
+
+  .textContainer {
+    max-width: 80%;
+  }
+
+
+  /*Design ----------------------------------------------------*/
+  #galleryContainer {
+    padding-top: 8vh;
+    padding-bottom: 15vh;
+  }
+
+  .gallery {
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  .gallery div {
+    position: relative;
+    float: left;
+    padding: 1%;
+    width: 98%;
+  }
+
+  .gallery div img {
+    margin: 0 auto;
+  }
+
+  .gallery div:hover img {
+    transform: scale(1, 1); /*1.7, 1.7*/
+    transition: .1s transform;
+  }
+
+  /* About ----------------------------------------------------------*/
+
+  #aboutContainer {
+    padding-top: 7vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #aboutText {
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    flex: 1;
+  }
+
+  #aboutPics {
+    flex: 1;
+  }
+
+  #aboutPics img {
+    display: block;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+}
+
+/* phones ***********************************************************************************************/
+/*------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 500px) {
+
+  /*Global ---------------------------------------------------------*/
+
+  .pageHeader {
+      font-size: 3em;
+      letter-spacing: .30em;
+      margin: 0;
+  }
+
+  .subHeader {
+      font-size: 1.2em;
+      letter-spacing: .15em;
+      margin: 0;
+  }
+
+  .section {
+      width: 100%;
+      padding: 2em 0 2em 0;
+  }
+
+  .sectionHeader {
+    font-size: 2.5em;
+    letter-spacing: .20em;
+    margin: 0;
+  }
+
+  h4 {
+    font-size: 1.5em;
+    padding-bottom: 2vh;
+  }
+
+  /*Design ---------------------------------------------------------------*/
+  #galleryContainer {
+    padding-top: 4vh;
+  }
+
+  /*About ---------------------------------------------------------------*/
+  #aboutContainer {
+    padding-top: 4vh;
+  }
+}
+ 
